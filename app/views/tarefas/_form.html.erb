@@ -1,0 +1,4 @@
+<%= form_for([@projeto, @projeto.tarefas.build]) do |f| %>
+	<%= f.submit %>
+	<%= f.text_field :content, placeholder: "Nova  tarefa" %>
+<% end %>

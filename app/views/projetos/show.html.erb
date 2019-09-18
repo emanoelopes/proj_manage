@@ -1,0 +1,21 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @projeto.title %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @projeto.description %>
+</p>
+
+<div id="todo_items_wrapper">
+	<%= render @projeto.tarefas %>
+	<div id="form">
+		<%= render "tarefas/form" %>
+	</div>
+</div>
+
+<%= link_to 'Edit', edit_projeto_path(@projeto) %> |
+<%= link_to 'Back', projetos_path %>

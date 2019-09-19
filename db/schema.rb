@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190918180312) do
+ActiveRecord::Schema.define(version: 20190918181846) do
 
   create_table "projetos", force: :cascade do |t|
     t.string   "title"
@@ -32,9 +32,10 @@ ActiveRecord::Schema.define(version: 20190918180312) do
   create_table "tarefas", force: :cascade do |t|
     t.string   "title"
     t.integer  "projeto_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
     t.string   "content"
+    t.datetime "completed_at"
   end
 
   add_index "tarefas", ["projeto_id"], name: "index_tarefas_on_projeto_id"

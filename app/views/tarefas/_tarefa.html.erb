@@ -3,7 +3,7 @@
 		<div class="complete">
 			<%= link_to "Mark as complete", complete_projeto_tarefa_path(@projeto, tarefa.id), method: :patch %>
 		</div>
-		<div class="task">
+		<div class="todo_item">
 			<p style="opacity: 0.4;"><strike><%= tarefa.content %></strike></p>
 		</div>
 		<div class="trash">
